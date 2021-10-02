@@ -140,7 +140,7 @@ int NInput()
 		}
 		else
 		{
-			std::cout << "Error. Please verify input.  Please" << std::endl;
+			std::cout << "Error. Please verify input." << std::endl;
 		}
 	}
 }
