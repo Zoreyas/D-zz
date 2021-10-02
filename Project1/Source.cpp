@@ -55,7 +55,6 @@ int main()
 			count1++;
 		}
 	}
-	std::cout << count1 << std::endl;
 
 	if (count1 == 0)
 	{
@@ -75,7 +74,37 @@ int main()
 			}
 			else
 			{
-				std::cout << "f";
+				int index1, index2;
+				for (int i = 0; i < n; i++)
+				{
+					if (a[i] < 0)
+					{
+						index1 = i;
+						break;
+					}
+				}
+				for (int i = n-1; i >= 0; i--)
+				{
+					if (a[i] < 0)
+					{
+						index2 = i;
+						break;
+					}
+				}
+				
+				if (index2 == index1 + 1)
+				{
+					std::cout << "Negative numbers are too close" << std::endl;
+				}
+				else
+				{
+					int sum = 0;
+					for (int i = index1 + 1; i < index2; i++)
+					{
+						sum += a[i];
+					}
+					std::cout << "Sum = " << sum << std::endl;
+				}
 			}
 		}
 	}
